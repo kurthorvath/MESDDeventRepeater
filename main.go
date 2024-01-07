@@ -20,11 +20,18 @@ func forward2Request(LD string) {
 	posturl := "http://127.0.0.1:7000"
 	body := []byte(LD)
 
-	_, err := http.NewRequest("POST", posturl, bytes.NewBuffer(body))
+	r, err := http.NewRequest("POST", posturl, bytes.NewBuffer(body))
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("forward LD", LD, "to", posturl)
+
+	client := &http.Client{}
+	res, err := client.Do(r)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("forward LD", LD, "to", posturl, res)
 }
 
 func main() {
