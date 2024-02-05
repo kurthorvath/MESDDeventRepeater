@@ -1,0 +1,117 @@
+2024-02-05T22:01:15.804Z [INFO]  agent.server.serf.lan: serf: EventMemberJoin: ConsulServer 3.16.183.50
+2024-02-05T22:01:15.804Z [INFO]  agent.router: Initializing LAN area manager
+2024-02-05T22:01:15.805Z [INFO]  agent.server.raft: entering follower state: follower="Node at 3.16.183.50:8300 [Follower]" leader-address= leader-id=
+2024-02-05T22:01:15.806Z [WARN]  agent.server.serf.wan: serf: Failed to re-join any previously known node
+2024-02-05T22:01:15.806Z [WARN]  agent.server.serf.lan: serf: Failed to re-join any previously known node
+2024-02-05T22:01:15.806Z [DEBUG] agent.grpc.balancer: switching server: target=consul://dc1.3e6d2f14-f191-ee20-e27b-bc8befc870e4/server.dc1 from=<none> to=dc1-3.16.183.50:8300
+2024-02-05T22:01:15.807Z [INFO]  agent.server: Adding LAN server: server="ConsulServer (Addr: tcp/3.16.183.50:8300) (DC: dc1)"
+2024-02-05T22:01:15.807Z [INFO]  agent.server: Handled event for server in area: event=member-join server=ConsulServer.dc1 area=wan
+2024-02-05T22:01:15.808Z [INFO]  agent.server.autopilot: reconciliation now disabled
+2024-02-05T22:01:15.811Z [INFO]  agent.server.cert-manager: initialized server certificate management
+2024-02-05T22:01:15.811Z [DEBUG] agent: Service tag will not be discoverable via DNS due to invalid characters. Valid characters include all alpha-numerics and dashes.: tag=waidmannsdorf.klagenfurt
+2024-02-05T22:01:15.812Z [DEBUG] agent: Service tag will not be discoverable via DNS due to invalid characters. Valid characters include all alpha-numerics and dashes.: tag=uni.waidmannsdorf.klagenfurt
+2024-02-05T22:01:15.812Z [DEBUG] agent: Service tag will not be discoverable via DNS due to invalid characters. Valid characters include all alpha-numerics and dashes.: tag=lsp.waidmannsdorf.klagenfurt
+2024-02-05T22:01:15.812Z [DEBUG] agent: Service tag will not be discoverable via DNS due to invalid characters. Valid characters include all alpha-numerics and dashes.: tag=south.uni.waidmannsdorf.klagenfurt
+2024-02-05T22:01:15.812Z [INFO]  agent: Started DNS server: address=0.0.0.0:8600 network=udp
+2024-02-05T22:01:15.812Z [DEBUG] agent.server.autopilot: autopilot is now running
+2024-02-05T22:01:15.812Z [DEBUG] agent.server.autopilot: state update routine is now running
+2024-02-05T22:01:15.812Z [DEBUG] agent.hcp_manager: HCP manager starting
+2024-02-05T22:01:15.813Z [INFO]  agent: Started DNS server: address=0.0.0.0:8600 network=tcp
+2024-02-05T22:01:15.813Z [INFO]  agent.http: Registered resource endpoint: endpoint=/internal/v1/tombstone/
+2024-02-05T22:01:15.813Z [INFO]  agent.http: Registered resource endpoint: endpoint=/catalog/v2beta1/healthstatus/
+2024-02-05T22:01:15.813Z [INFO]  agent.http: Registered resource endpoint: endpoint=/auth/v2beta1/computedtrafficpermissions/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/catalog/v2beta1/node/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/demo/v1/artist/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/httproute/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/grpcroute/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/tenancy/v1alpha1/namespace/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/demo/v2/artist/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/tcproute/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/auth/v2beta1/trafficpermissions/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/demo/v1/executive/
+2024-02-05T22:01:15.814Z [INFO]  agent.http: Registered resource endpoint: endpoint=/demo/v1/concept/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/catalog/v2beta1/workload/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/proxystatetemplate/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/catalog/v2beta1/serviceendpoints/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/auth/v2beta1/workloadidentity/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/destinationpolicy/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/catalog/v2beta1/service/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/catalog/v2beta1/failoverpolicy/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/demo/v1/recordlabel/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/proxyconfiguration/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/computedexplicitdestinations/
+2024-02-05T22:01:15.815Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/destinations/
+2024-02-05T22:01:15.816Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/computedroutes/
+2024-02-05T22:01:15.816Z [INFO]  agent.http: Registered resource endpoint: endpoint=/demo/v1/album/
+2024-02-05T22:01:15.816Z [INFO]  agent.http: Registered resource endpoint: endpoint=/demo/v2/album/
+2024-02-05T22:01:15.816Z [INFO]  agent.http: Registered resource endpoint: endpoint=/mesh/v2beta1/computedproxyconfiguration/
+2024-02-05T22:01:15.816Z [INFO]  agent: Starting server: address=[::]:8500 network=tcp protocol=http
+2024-02-05T22:01:15.816Z [INFO]  agent: started state syncer
+2024-02-05T22:01:15.816Z [INFO]  agent: Consul agent running!
+2024-02-05T22:01:15.817Z [INFO]  agent: Started gRPC listeners: port_name=grpc_tls address=[::]:8503 network=tcp
+2024-02-05T22:01:15.817Z [INFO]  agent: Retry join is supported for the following discovery methods: cluster=LAN discovery_methods="aliyun aws azure digitalocean gce hcp k8s linode mdns os packet scaleway softlayer tencentcloud triton vsphere"
+2024-02-05T22:01:15.817Z [INFO]  agent: Joining cluster...: cluster=LAN
+2024-02-05T22:01:15.817Z [INFO]  agent: (LAN) joining: lan_addresses=["3.16.183.50"]
+2024-02-05T22:01:15.817Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with:  3.16.183.50:8301
+2024-02-05T22:01:15.818Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=3.16.183.50:55018
+2024-02-05T22:01:15.819Z [INFO]  agent: (LAN) joined: number_of_nodes=1
+2024-02-05T22:01:15.819Z [DEBUG] agent: systemd notify failed: error="No socket"
+2024-02-05T22:01:15.819Z [INFO]  agent: Join cluster completed. Synced with initial agents: cluster=LAN num_agents=1
+2024-02-05T22:01:16.814Z [DEBUG] agent.server.cert-manager: CA has not finished initializing
+2024-02-05T22:01:17.814Z [DEBUG] agent.server.cert-manager: CA has not finished initializing
+2024-02-05T22:01:18.815Z [DEBUG] agent.server.cert-manager: CA has not finished initializing
+2024-02-05T22:01:19.816Z [DEBUG] agent.server.cert-manager: CA has not finished initializing
+2024-02-05T22:01:20.817Z [DEBUG] agent.server.cert-manager: CA has not finished initializing
+2024-02-05T22:01:21.817Z [DEBUG] agent.server.cert-manager: CA has not finished initializing
+2024-02-05T22:01:22.817Z [DEBUG] agent.server.cert-manager: CA has not finished initializing
+2024-02-05T22:01:23.798Z [ERROR] agent.anti_entropy: failed to sync remote state: error="No cluster leader"
+2024-02-05T22:01:23.822Z [DEBUG] agent.server.cert-manager: CA has not finished initializing
+2024-02-05T22:01:24.573Z [WARN]  agent.server.raft: heartbeat timeout reached, starting election: last-leader-addr= last-leader-id=
+2024-02-05T22:01:24.573Z [INFO]  agent.server.raft: entering candidate state: node="Node at 3.16.183.50:8300 [Candidate]" term=24
+2024-02-05T22:01:24.575Z [DEBUG] agent.server.raft: voting for self: term=24 id=3e6d2f14-f191-ee20-e27b-bc8befc870e4
+2024-02-05T22:01:24.578Z [DEBUG] agent.server.raft: calculated votes needed: needed=1 term=24
+2024-02-05T22:01:24.578Z [DEBUG] agent.server.raft: vote granted: from=3e6d2f14-f191-ee20-e27b-bc8befc870e4 term=24 tally=1
+2024-02-05T22:01:24.579Z [INFO]  agent.server.raft: election won: term=24 tally=1
+2024-02-05T22:01:24.579Z [INFO]  agent.server.raft: entering leader state: leader="Node at 3.16.183.50:8300 [Leader]"
+2024-02-05T22:01:24.592Z [DEBUG] agent.hcp_manager: HCP triggering status update
+2024-02-05T22:01:24.592Z [INFO]  agent.server: cluster leadership acquired
+2024-02-05T22:01:24.592Z [DEBUG] agent.controller-runtime: controller running: managed_type=internal.v1.Tombstone
+2024-02-05T22:01:24.616Z [DEBUG] agent.server.xds_capacity_controller: updating drain rate limit: rate_limit=1
+2024-02-05T22:01:24.616Z [INFO]  agent.server: New leader elected: payload=ConsulServer
+2024-02-05T22:01:24.834Z [DEBUG] agent.server.cert-manager: CA config watch fired - updating auto TLS server name: name=server.dc1.peering.84cdd272-2e40-23c2-ed99-cd42b0f666b7.consul
+2024-02-05T22:01:25.149Z [INFO]  agent.server.autopilot: reconciliation now enabled
+2024-02-05T22:01:25.149Z [INFO]  agent.leader: started routine: routine="federation state anti-entropy"
+2024-02-05T22:01:25.149Z [INFO]  agent.leader: started routine: routine="federation state pruning"
+2024-02-05T22:01:25.149Z [INFO]  agent.leader: started routine: routine="streaming peering resources"
+2024-02-05T22:01:25.150Z [INFO]  agent.leader: started routine: routine="metrics for streaming peering resources"
+2024-02-05T22:01:25.150Z [INFO]  agent.leader: started routine: routine="peering deferred deletion"
+2024-02-05T22:01:25.150Z [INFO]  connect.ca: initialized primary datacenter CA from existing CARoot with provider: provider=consul
+2024-02-05T22:01:25.150Z [INFO]  agent.leader: started routine: routine="intermediate cert renew watch"
+2024-02-05T22:01:25.150Z [INFO]  agent.leader: started routine: routine="CA root pruning"
+2024-02-05T22:01:25.150Z [INFO]  agent.leader: started routine: routine="CA root expiration metric"
+2024-02-05T22:01:25.150Z [INFO]  agent.leader: started routine: routine="CA signing expiration metric"
+2024-02-05T22:01:25.150Z [INFO]  agent.leader: started routine: routine="virtual IP version check"
+2024-02-05T22:01:25.151Z [INFO]  agent.leader: started routine: routine="config entry controllers"
+2024-02-05T22:01:25.151Z [DEBUG] agent.server: successfully established leadership: duration=1.922288ms
+2024-02-05T22:01:25.151Z [INFO]  agent.leader: stopping routine: routine="virtual IP version check"
+2024-02-05T22:01:25.152Z [INFO]  agent.leader: stopped routine: routine="virtual IP version check"
+2024-02-05T22:01:25.218Z [DEBUG] agent.dns: labels: querySuffixes=[]
+2024-02-05T22:01:25.219Z [DEBUG] agent.dns: request served from client: name=consul.service.consul. type=A class=IN latency="518.756µs" client=127.0.0.1:50921 client_network=udp
+2024-02-05T22:01:25.354Z [DEBUG] agent.dns: labels: querySuffixes=[]
+2024-02-05T22:01:25.355Z [DEBUG] agent.dns: request served from client: name=consul.service.consul. type=AAAA class=IN latency="497.529µs" client=127.0.0.1:55856 client_network=udp
+2024-02-05T22:01:25.418Z [DEBUG] agent.dns: request served from client: question="{50.183.16.3.in-addr.arpa. 12 1}" latency=2.577895054s client=127.0.0.1:37979 client_network=udp
+2024-02-05T22:01:25.555Z [DEBUG] agent: Skipping remote check since it is managed automatically: check=serfHealth
+2024-02-05T22:01:25.557Z [INFO]  agent: Synced node info
+2024-02-05T22:01:25.557Z [DEBUG] agent: Service in sync: service=counting
+2024-02-05T22:01:25.557Z [DEBUG] agent: Service in sync: service=testapp
+2024-02-05T22:01:25.557Z [DEBUG] agent: Node info in sync
+2024-02-05T22:01:25.558Z [DEBUG] agent: Service in sync: service=counting
+2024-02-05T22:01:25.558Z [DEBUG] agent: Service in sync: service=testapp
+2024-02-05T22:01:25.812Z [ERROR] agent.server.autopilot: Failed to reconcile current state with the desired state
+2024-02-05T22:01:27.661Z [DEBUG] agent.server.cert-manager: got cache update event: correlationID=leaf error=<nil>
+2024-02-05T22:01:27.661Z [DEBUG] agent.server.cert-manager: leaf certificate watch fired - updating auto TLS certificate: uri=spiffe://84cdd272-2e40-23c2-ed99-cd42b0f666b7.consul/agent/server/dc/dc1
+2024-02-05T22:02:00.991Z [DEBUG] agent.dns: request served from client: question="{50.183.16.3.in-addr.arpa. 12 1}" latency="188.178µs" client=127.0.0.1:55404 client_network=udp
+2024-02-05T22:02:01.444Z [DEBUG] agent.dns: labels: querySuffixes=[]
+2024-02-05T22:02:01.445Z [DEBUG] agent.dns: request served from client: name=consul.service.consul. type=A class=IN latency="529.17µs" client=127.0.0.1:49583 client_network=udp
+2024-02-05T22:02:01.578Z [DEBUG] agent.dns: labels: querySuffixes=[]
+2024-02-05T22:02:01.578Z [DEBUG] agent.dns: request served from client: name=consul.service.consul. type=AAAA class=IN latency="508.201µs" client=127.0.0.1:43778 client_network=udp

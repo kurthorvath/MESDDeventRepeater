@@ -3,17 +3,13 @@ package main
 import (
 	"bufio"
 	"bytes"
-	"context"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
+	"os"
 	"reflect"
 	"regexp"
 	"strings"
-
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
 )
 
 func forward2Request(LD string) {
@@ -22,29 +18,36 @@ func forward2Request(LD string) {
 
 	r, err := http.NewRequest("POST", posturl, bytes.NewBuffer(body))
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 
 	client := &http.Client{}
 	res, err := client.Do(r)
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 
 	fmt.Println("forward LD", LD, "to", posturl, res)
 }
 
 func main() {
-	ctx, _ := client.NewClientWithOpts(client.FromEnv)
-	reader, err := ctx.ContainerLogs(context.Background(), "259e221e47c0", types.ContainerLogsOptions{
-		ShowStdout: true,
-		Follow:     true,
-	})
+	/*
+		ctx, _ := client.NewClientWithOpts(client.FromEnv)
+		reader, err := ctx.ContainerLogs(context.Background(), "259e221e47c0", types.ContainerLogsOptions{
+			ShowStdout: true,
+			Follow:     true,
+		})
 
+		if err != nil {
+			log.Fatal(err)
+		}
+	*/
+
+	reader, err := os.Open("consul.log")
 	if err != nil {
-		log.Fatal(err)
+		fmt.Printf("error opening file: %v\n", err)
+		os.Exit(1)
 	}
-
 	//var stdout string
 	go func() {
 		buf := bufio.NewReader(reader)
@@ -58,15 +61,15 @@ func main() {
 
 					if len(match) > 1 {
 						fmt.Println("match found -", match[1][:len(match[1])-2], len(match[1][:len(match[1])-2]))
-						forward2Request(match[1][:len(match[1])-2])
+						//forward2Request(match[1][:len(match[1])-2])
 					}
-					//fmt.Println("new elem", out)
+					fmt.Println("new elem", line)
 				}
 
 				//stdout = stdout + line + "\n"
 			}
 			if err != nil {
-				return
+				fmt.Println(err)
 			}
 		}
 	}()
@@ -75,15 +78,17 @@ func main() {
 	buf := new(bytes.Buffer)
 
 	_, err = io.Copy(buf, reader)
-	if err != nil && err != io.EOF {
-		//	log.Fatal(err)
-	}
-	sBUF := buf.String()
+	/*
+		if err != nil && err != io.EOF {
+			fmt.Println(err)
+			//	log.Fatal(err)
+		}
+		sBUF := buf.String()
 
-	if strings.Contains(sBUF, "dc1") {
-		//	fmt.Println("new elem", sBUF)
-	}
-
+			if strings.Contains(sBUF, "dc1") {
+				fmt.Println("new elem", sBUF)
+			}
+	*/
 }
 
 /*
