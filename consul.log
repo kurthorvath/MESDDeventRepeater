@@ -115,3 +115,4 @@
 2024-02-05T22:02:01.445Z [DEBUG] agent.dns: request served from client: name=consul.service.consul. type=A class=IN latency="529.17µs" client=127.0.0.1:49583 client_network=udp
 2024-02-05T22:02:01.578Z [DEBUG] agent.dns: labels: querySuffixes=[]
 2024-02-05T22:02:01.578Z [DEBUG] agent.dns: request served from client: name=consul.service.consul. type=AAAA class=IN latency="508.201µs" client=127.0.0.1:43778 client_network=udp
+2024-02-05T22:02:01.578Z [DEBUG] agent.dns: request served from client: name=franz.service.consul. type=AAAA class=IN latency="508.201µs" client=127.0.0.1:43778 client_network=udp
